@@ -8,7 +8,9 @@ A Python-based voice assistant that uses Hugging Face Transformers to recognize 
 -  Natural Language Processing (Hugging Face Transformers)
 - Text to Speech (pyttsx3)
 - Play YouTube videos
-- Open local apps (Notepad, Calculator, Browser)
+- Open local apps (Notepad,Browser)
+- Chat interface for manual input
+- Chat history saving and display
 
 [Requirements]
 - Python 3.8 or higher
@@ -39,6 +41,11 @@ python run.py
 - "Play Shape of You on YouTube"
 - "Open Notepad"
 - "Tell me a (ANYTHING)"
+
+[Chat History]
+- User questions and assistant responses are saved
+- Can be displayed or logged as needed
+
 
 
 [Author]  

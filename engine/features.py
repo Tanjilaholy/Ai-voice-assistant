@@ -14,6 +14,7 @@ from engine.config import ASSISTANT_NAME
 import pywhatkit as kit
 
 from engine.helper import extract_yt_term
+from hugchat import hugchat
 
 
 con = sqlite3.connect("lexi.db")
@@ -107,3 +108,14 @@ def hotword():
             audio_stream.close()
         if paud is not None:
             paud.terminate()
+
+
+def chatBot(query):
+    user_input = query.lower()
+    chatbot = hugchat.ChatBot(cookie_path="engine\\cookies.json")
+    id = chatbot.new_conversation()
+    chatbot.change_conversation(id)
+    response =  chatbot.chat(user_input)
+    print(response)
+    speak(response)
+    return response

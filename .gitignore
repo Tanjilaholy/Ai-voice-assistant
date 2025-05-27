@@ -15,8 +15,11 @@ __pycache__/
 
 
 .DS_Store
-Thumbs.db
+lexi.db
+contacts.csv
 
+/engine/__pycache__
+/engine/cookies.json
 
 venv/
 env/

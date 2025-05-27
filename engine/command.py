@@ -4,9 +4,9 @@ import eel
 import time
 
 def speak(text):
-   
+    text = str(text)
     engine = pyttsx3.init('sapi5')
-    voices = engine.getProperty('voices') 
+    voices = engine.getProperty('voices')
     engine.setProperty('voice', voices[1].id)
     engine.setProperty('rate', 174)
     eel.DisplayMessage(text)
@@ -14,37 +14,29 @@ def speak(text):
     eel.receiverText(text)
     engine.runAndWait()
 
-
 def takecommand():
-
     r = sr.Recognizer()
-
     with sr.Microphone() as source:
         print('listening....')
         eel.DisplayMessage('listening....')
         r.pause_threshold = 1
         r.adjust_for_ambient_noise(source)
-        
         audio = r.listen(source, 10, 6)
 
     try:
         print('recognizing')
         eel.DisplayMessage('recognizing....')
-       
         query = r.recognize_google(audio, language='en-US')
         print(f"user said: {query}")
         eel.DisplayMessage(query)
-        
-      
-       
-    except Exception as e:
+        time.sleep(2)
+    except Exception:
         return ""
     
     return query.lower()
 
 @eel.expose
 def allCommands(message=1):
-
     if message == 1:
         query = takecommand()
         print(query)
@@ -53,22 +45,20 @@ def allCommands(message=1):
         query = message
         eel.senderText(query)
 
-
     try:
-
-
         if "open" in query:
             from engine.features import openCommand
             openCommand(query)
 
-        elif "on youtube":
+        elif "on youtube" in query:
             from engine.features import PlayYoutube
             PlayYoutube(query)
 
         else:
-            print("not run")
+            from engine.features import chatBot
+            chatBot(query)
 
-    except:
-        print("error")
+    except Exception as e:
+        print("error:", str(e))
 
     eel.ShowHood()

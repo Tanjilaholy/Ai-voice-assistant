@@ -1,6 +1,5 @@
 import multiprocessing
 
-
 def startLexi():
        
         print("Process 1 is running.")

@@ -14,7 +14,7 @@ $(document).ready(function () {
 
     });
 
-    // Siri configuration
+  
     var siriWave = new SiriWave({
         container: document.getElementById("siri-container"),
         width: 800,
@@ -25,7 +25,7 @@ $(document).ready(function () {
         autostart: true
       });
 
-       // Siri message animation
+      
     $('.siri-message').textillate({
          loop: true,
         sync: true,
@@ -40,7 +40,7 @@ $(document).ready(function () {
 
     });
 
-    //mic button
+   
 
     $("#MicBtn").click(function () { 
         eel.playAssistantSound()
@@ -96,7 +96,7 @@ $(document).ready(function () {
     
     });
     
-    // send button event handler
+
     $("#SendBtn").click(function () {
     
         let message = $("#chatbox").val()

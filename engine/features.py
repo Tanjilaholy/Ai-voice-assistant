@@ -24,7 +24,7 @@ cursor = con.cursor()
 
 @eel.expose
 def playAssistantSound():
-    music_dir = "F:\\LEXI\\www\\assets\\www_assets_audio_start_sound.mp3"
+    music_dir = "www\\assets\\www_assets_audio_start_sound.mp3" 
     playsound(music_dir)
 
 

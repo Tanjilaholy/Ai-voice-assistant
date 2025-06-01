@@ -1,55 +1,62 @@
+# Project Title
+
 AI Voice Assistant
 
-[Description]  
 A Python-based voice assistant that uses Hugging Face Transformers to recognize speech, process natural language, and perform actions such as searching the web, opening applications, or speaking responses.
 
-[Features]
-- Speech to Text (SpeechRecognition)
--  Natural Language Processing (Hugging Face Transformers)
-- Text to Speech (pyttsx3)
-- Play YouTube videos
-- Open local apps (Notepad,Browser)
-- Chat interface for manual input
-- Chat history saving and display
 
-[Requirements]
-- Python 3.8 or higher
-- Microphone
-- Internet connection
 
-[Installation]
-1. Clone the repository:
+
+## Features
+
+● Speech to Text (`SpeechRecognition`)    
+● Natural Language Processing (`Hugging Face   Transformers`)  
+● Text to Speech (`pyttsx3`)  
+● Play YouTube videos  
+● Open local apps (Notepad, Browser)  
+● Chat interface for manual input  
+● Chat history saving and display  
+
+## Requirements
+● Python 3.8 or higher  
+● A working microphone  
+● Internet connection (for NLP & YouTube)
+
+## Installation
+Clone the repository:
+
+```bash
 git clone https://github.com/Tanjilaholy/Ai-voice-assistant.git
 cd Ai-voice-assistant
+```
 
-
-2. Install dependencies:
+Install dependencies:
+```bash
 pip install -r requirements.txt
+```
+Or install manually:
+```bash
+pip install speechrecognition pyttsx3 pywhatkit
+```
+## Usage
 
-
-If `requirements.txt` is not available:
-pip install speechrecognition pyttsx3  pywhatkit 
-
-
-[Usage]
 Run the assistant using:
-
+```bash
 python run.py
+```
 
 
-[Example Commands]
-- "Play Shape of You on YouTube"
-- "Open Notepad"
-- "Tell me a (ANYTHING)"
+## Example Commands
+● "Play Shape of You on YouTube"  
+● "Open Notepad"  
+● "Tell me a joke"  
+● "Tell me (ANYTHING)"
 
-[Chat History]
-- User questions and assistant responses are saved
-- Can be displayed or logged as needed
+## Chat History
+● User queries and assistant responses are saved  
+● Can be displayed or logged for later use  
+## Authors
 
-
-
-[Author]  
-Developed by [Tanjilaholy]
-(https://github.com/Tanjilaholy)
+- [@Tanjilaholy](https://github.com)
 
 
